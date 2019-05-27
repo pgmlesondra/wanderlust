@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <title>WANDERLUST.</title>
+
+  <style>
+    :root {
+      --white: #fff;
+      --main-color: #09040c;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--white);
+      background: var(--main-color);
+    }
+
+    .logo {
+      grid-column: 1/3;
+      grid-row: 1;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    .logo h1 {
+      font-weight: 700;
+      font-size: 2.2rem;
+    }
+
+    .logo h1 span {
+      font-weight: 400;
+    }
+
+    .sign-up {
+      grid-column: 11/13;
+      grid-row: 1;
+      padding: 2rem 0;
+    }
+
+    .sign-up .btn-sign-up {
+      background: #9c9c9c73;
+      color: var(--white);
+      border-radius: 30px;
+      padding: 1rem 3rem;
+      text-decoration: none;
+      /* text-transform: uppercase; */
+      margin: .3rem 0;
+      display: inline-block;
+    }
+
+    .container {
+      height: 100vh;
+      width: 100%;
+    }
+
+    .bg-layer {
+      grid-column: 1/13;
+      grid-row: 1;
+    }
+
+    .main,
+    .header {
+      background: var(--main-color);
+    }
+
+    .header {
+      grid-column: 1/13;
+      grid-row: 1;
+    }
+
+    .header.grid {
+      grid-template-rows: repeat(1, 1fr)
+    }
+
+    .main-title {
+      grid-column: 5/10;
+      grid-row: 1;
+      text-align: left;
+      display: flex;
+      /* justify-content: center; */
+      align-items: center;
+    }
+
+    .main-title h2 {
+      font-size: 6.5rem;
+      font-weight: 500;
+      text-shadow: 3px 3px 11px #04294cad;
+    }
+
+    .main {
+      grid-column: 1/13;
+      grid-row: 2;
+      position: relative;
+      z-index: 999;
+      background: #09040a;
+      margin: -1rem 0 0;
+    }
+
+    .main.grid {
+      grid-template-rows: 100px 300px 400px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(2, 1fr)
+    }
+
+    .layer-1 {
+      grid-column: 1/13;
+      grid-row: 1;
+    }
+
+    .layer-2 {
+      grid-column: 1/13;
+      grid-row: 1;
+    }
+
+    .layer-3 {
+      grid-column: 1/13;
+      grid-row: 1;
+    }
+
+    .box {}
+
+    .box-1 {}
+
+    .box-1.grid {
+      grid-column: 1/13;
+      grid-row: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .box-1.grid .box-1-left {
+      grid-column: 1/3;
+      grid-row: 1;
+      padding: 0 2rem;
+    }
+
+    .box-1.grid .box-1-left h2 {
+      font-size: 4.4rem;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .box-1.grid .box-1-left h2 span {
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: #7b7b7b;
+    }
+
+    .box-1.grid .box-1-right {
+      grid-column: 08/13;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    .box-1.grid .box-1-right ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    .box-1.grid .box-1-right ul li {
+      padding: 0 1rem;
+    }
+
+    .box-1.grid .box-1-right ul li a {
+      display: inline-block;
+      color: #dedede;
+      text-decoration: none;
+    }
+
+    .box-2.grid {
+      grid-column: 3/11;
+      grid-row: 3;
+    }
+
+    .box-2.grid .box-2-left {
+      grid-column: 1/08;
+      text-align: left;
+    }
+
+    .box-2.grid .box-2-left .red-text {
+      text-transform: uppercase;
+      color: #c70030;
+      margin: .7rem 0;
+      font-weight: 500;
+    }
+
+    .box-2.grid .box-2-left h3 {
+      font-size: 2rem;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .box-2.grid .box-2-left p {
+      color: #7b7b7b;
+      line-height: 1.4;
+    }
+
+    .box-2.grid .box-2-right {
+      grid-column: 09/13;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="grid">
+      <header class="header grid">
+        <div class="bg-layer rellax" data-rellax-speed="-5" data-rellax-zindex="1">
+          <img src="./images/bg1.png" alt="" width="100%">
+        </div>
+
+        <div class="layer-3 rellax" data-rellax-speed="-5" data-rellax-zindex="1">
+          <img src="./images/3rd.png" alt="" width="100%">
+        </div>
+        <div class="layer-2 rellax" data-rellax-speed="-3" data-rellax-zindex="2">
+          <img src="./images/2nd.png" alt="" width="100%">
+        </div>
+
+        <div class="layer-1 rellax" data-rellax-speed="0" data-rellax-zindex="3">
+          <img src="./images/1st.png" alt="" width="100%">
+        </div>
+        <div class="logo rellax" data-rellax-speed="1" data-rellax-zindex="3">
+          <h1>Ready <span>co.</span></h1>
+        </div>
+        <div class="sign-up rellax" data-rellax-speed="1" data-rellax-zindex="3">
+          <a href="" class="btn btn-sign-up">Sign Up</a>
+        </div>
+        <div class="main-title rellax" data-rellax-speed="3" data-rellax-zindex="3">
+          <h2>Wanderlust.</h2>
+        </div>
+      </header>
+      <main class="main grid">
+        <div class="box box-1 grid rellax" data-rellax-speed="1" data-rellax-zindex="3">
+          <div class="box-1-left">
+            <h2>03<span>/03</span></h2>
+          </div>
+          <div class="box-1-right">
+            <ul>
+              <li><a href="#0">Instagram</a></li>
+              <li><a href="#0">Facebook</a></li>
+              <li><a href="#0">Dribble</a></li>
+              <li><a href="#0">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="box box-2 grid rellax" data-rellax-speed="3" data-rellax-zindex="3">
+          <div class="box-2-left">
+            <p class="red-text">Live.</p>
+            <h3>Techno Dance Party</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+          </div>
+          <div class="box-2-right">
+            <img src="../IMAGES/RAW/band-cheering-concert-12574.jpg" width="100%" alt="">
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.min.js"></script>
+  <script>
+    var rellax = new Rellax('.rellax');
+  </script>
+</body>
+
+</html>
